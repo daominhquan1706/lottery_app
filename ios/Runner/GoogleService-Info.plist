@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>293110607839-gfslnice7e1ns8akqblaqn5qi468uqgq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.293110607839-gfslnice7e1ns8akqblaqn5qi468uqgq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDzd_Pdgu5t87JPIUMpzY0rVZ40ZonIAZU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>293110607839</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.daominhquan.lovecount</string>
+	<key>PROJECT_ID</key>
+	<string>lovecount-eb812</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lovecount-eb812.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:293110607839:ios:634da30b607d1c8e1b1e6a</string>
+	<key>DATABASE_URL</key>
+	<string>https://lovecount-eb812.firebaseio.com</string>
+</dict>
+</plist>

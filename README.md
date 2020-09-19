@@ -9,7 +9,7 @@ A boilerplate project created in flutter using MobX and Provider. Boilerplate su
 
 The Boilerplate contains the minimal implementation required to create a new library or project. The repository code is preloaded with some basic components like basic app architecture, app theme, constants and required dependencies to create a new project. By using boiler plate code as standard initializer, we can have same patterns in all the projects that will inherit it. This will also help in reducing setup & development time by allowing you to use same code pattern and avoid re-writing from scratch.
 
-## How to Use 
+## How to Use
 
 **Step 1:**
 
@@ -21,10 +21,10 @@ https://github.com/zubairehman/flutter-boilerplate-project.git
 
 **Step 2:**
 
-Go to project root and execute the following command in console to get the required dependencies: 
+Go to project root and execute the following command in console to get the required dependencies:
 
 ```
-flutter pub get 
+flutter pub get
 ```
 
 **Step 3:**
@@ -126,7 +126,7 @@ Now, lets dive into the lib folder which has the main code for the application.
 ```
 1- constants - All the application level constants are defined in this directory with-in their respective files. This directory contains the constants for `theme`, `dimentions`, `api endpoints`, `preferences` and `strings`.
 2- data - Contains the data layer of your project, includes directories for local, network and shared pref/cache.
-3- stores - Contains store(s) for state-management of your application, to connect the reactive data of your application with the UI. 
+3- stores - Contains store(s) for state-management of your application, to connect the reactive data of your application with the UI.
 4- ui — Contains all the ui of your project, contains sub directory for each screen.
 5- util — Contains the utilities/common functions of your application.
 6- widgets — Contains the common widgets for your applications. For example, Button, TextField etc.
@@ -157,16 +157,16 @@ data/
     |- constants/
     |- datasouces/
     |- app_database.dart
-   
+
 |- network/
     |- constants/
     |- exceptions/
     |- rest_client.dart
-    
+
 |- sharedpref
     |- constants/
     |- shared_preference_helper.dart
-    
+
 |- repository.dart
 
 ```
@@ -197,7 +197,7 @@ ui/
 
 ### Utils
 
-Contains the common file(s) and utilities used in a project. The folder structure is as follows: 
+Contains the common file(s) and utilities used in a project. The folder structure is as follows:
 
 ```
 utils/

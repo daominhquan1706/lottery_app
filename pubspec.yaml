@@ -65,6 +65,24 @@ dependencies:
       path: package/inject
       ref: 7c3cbf6
 
+  #Firebase setup
+  firebase_core:
+  # Database
+  cloud_firestore:
+
+  # User Auth
+  firebase_auth:
+  google_sign_in:
+
+  # Analytics
+  firebase_analytics:
+
+  # CrashLytics
+  firebase_crashlytics:
+
+  # Performance
+  firebase_performance:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

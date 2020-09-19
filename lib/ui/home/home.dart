@@ -22,6 +22,17 @@ class _HomeScreenState extends State<HomeScreen> {
   PostStore _postStore;
   ThemeStore _themeStore;
   LanguageStore _languageStore;
+  Map<String, dynamic> _listData = {
+    "0": ["097198"],
+    "1": ["00417"],
+    "2": ["39548"],
+    "3": ["34866", "34866"],
+    "4": ["34866", "34866", "45153", "39583", "00287", "12341", "09123"],
+    "5": ["1312"],
+    "6": ["1312", "1312", "1312"],
+    "7": ["1312"],
+    "8": ["48"],
+  };
 
   @override
   void initState() {
@@ -48,21 +59,51 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: _buildAppBar(),
       body: _buildBody(),
+      drawer: _buildDrawer(),
+    );
+  }
+
+  Drawer _buildDrawer() {
+    return Drawer(
+      child: ListView(
+        children: [
+          DrawerHeader(
+            child: Text("Drawer Header"),
+          ),
+          ListTile(
+            leading: Icon(Icons.ac_unit),
+            title: Text("Item 1"),
+          ),
+          ListTile(
+            leading: Icon(Icons.ac_unit),
+            title: Text("Item 1"),
+          ),
+          ListTile(
+            leading: Icon(Icons.ac_unit),
+            title: Text("Item 1"),
+          ),
+          ListTile(
+            leading: Icon(Icons.ac_unit),
+            title: Text("Item 1"),
+          ),
+        ],
+      ),
     );
   }
 
   // app bar methods:-----------------------------------------------------------
   Widget _buildAppBar() {
     return AppBar(
-      title: Text(AppLocalizations.of(context).translate('home_tv_posts')),
+      title: Center(
+          child: Text(AppLocalizations.of(context).translate('home_tv_posts'))),
       actions: _buildActions(context),
     );
   }
 
   List<Widget> _buildActions(BuildContext context) {
     return <Widget>[
-      _buildLanguageButton(),
-      _buildThemeButton(),
+//      _buildLanguageButton(),
+//      _buildThemeButton(),
       _buildLogoutButton(),
     ];
   }
@@ -122,46 +163,84 @@ class _HomeScreenState extends State<HomeScreen> {
       builder: (context) {
         return _postStore.loading
             ? CustomProgressIndicatorWidget()
-            : Material(child: _buildListView());
+            : Material(
+                child: Table(
+                  columnWidths: {0: FractionColumnWidth(.2)},
+                  border: TableBorder.all(),
+                  defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                  children: [
+                    _buildRow(title: "Giải tám", data: [
+                      _listData["8"],
+                      _listData["8"],
+                      _listData["8"],
+                    ]),
+                    _buildRow(title: "Giải bảy", data: [
+                      _listData["7"],
+                      _listData["7"],
+                      _listData["7"],
+                    ]),
+                    _buildRow(title: "Giải sáu", data: [
+                      _listData["6"],
+                      _listData["6"],
+                      _listData["6"],
+                    ]),
+                    _buildRow(title: "Giải năm", data: [
+                      _listData["5"],
+                      _listData["5"],
+                      _listData["5"],
+                    ]),
+                    _buildRow(title: "Giải bốn", data: [
+                      _listData["4"],
+                      _listData["4"],
+                      _listData["4"],
+                    ]),
+                    _buildRow(title: "Giải ba", data: [
+                      _listData["3"],
+                      _listData["3"],
+                      _listData["3"],
+                    ]),
+                    _buildRow(title: "Giải hai", data: [
+                      _listData["2"],
+                      _listData["2"],
+                      _listData["2"],
+                    ]),
+                    _buildRow(title: "Giải một", data: [
+                      _listData["1"],
+                      _listData["1"],
+                      _listData["1"],
+                    ]),
+                    _buildRow(title: "Giải đặc biệt", data: [
+                      _listData["0"],
+                      _listData["0"],
+                      _listData["0"],
+                    ]),
+                  ],
+                ),
+              );
       },
     );
   }
 
-  Widget _buildListView() {
-    return _postStore.postList != null
-        ? ListView.separated(
-            itemCount: _postStore.postList.posts.length,
-            separatorBuilder: (context, position) {
-              return Divider();
-            },
-            itemBuilder: (context, position) {
-              return _buildListItem(position);
-            },
-          )
-        : Center(
-            child: Text(
-              AppLocalizations.of(context).translate('home_tv_no_post_found'),
-            ),
-          );
+  TableRow _buildRow({String title, List<List<String>> data}) {
+    return TableRow(
+      children: [Center(child: Text(title)), ...listColumn(data)],
+    );
   }
 
-  Widget _buildListItem(int position) {
-    return ListTile(
-      dense: true,
-      leading: Icon(Icons.cloud_circle),
-      title: Text(
-        '${_postStore.postList.posts[position].title}',
-        maxLines: 1,
-        overflow: TextOverflow.ellipsis,
-        softWrap: false,
-        style: Theme.of(context).textTheme.title,
-      ),
-      subtitle: Text(
-        '${_postStore.postList.posts[position].body}',
-        maxLines: 1,
-        overflow: TextOverflow.ellipsis,
-        softWrap: false,
-      ),
+  List<Widget> listColumn(List<List<String>> data) {
+    return data
+        .map((listNumber) => Column(
+            children: listNumber.map((e) => Center(child: Text(e))).toList()))
+        .toList();
+  }
+
+  Widget _buildMenuItem() {
+    return Container(
+      padding: const EdgeInsets.all(8),
+      decoration: BoxDecoration(
+          color: Colors.amber,
+          borderRadius: BorderRadius.all(Radius.circular(16))),
+      child: const Text("He'd have you all unravel at the"),
     );
   }
 

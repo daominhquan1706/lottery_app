@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "293110607839",
+    "firebase_url": "https://lovecount-eb812.firebaseio.com",
+    "project_id": "lovecount-eb812",
+    "storage_bucket": "lovecount-eb812.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293110607839:android:01fefb882f69ba021b1e6a",
+        "android_client_info": {
+          "package_name": "com.daominhquan.lovecount"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293110607839-5so1e74grjleqjhrgrn9k7rl6jmf4llu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.daominhquan.lovecount",
+            "certificate_hash": "46d394ad51378906dfc3b34f3ae81cc76cce1da1"
+          }
+        },
+        {
+          "client_id": "293110607839-gqasvbbvd3oec6efbvuh4oip28n6m215.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVWsqAmJ4UppmtpPMlnpNuSfnXOpbvXgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293110607839-gqasvbbvd3oec6efbvuh4oip28n6m215.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "293110607839-gfslnice7e1ns8akqblaqn5qi468uqgq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.daominhquan.lovecount"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
